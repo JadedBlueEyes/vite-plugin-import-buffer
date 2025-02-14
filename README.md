@@ -41,6 +41,17 @@ Default: `[]`
 
 Glob patterns or RegExp to exclude files.
 
+### `loader`
+
+Type: `(src: string) => string`
+
+Default: `(src) => `import { readFile } from 'node:fs/promises';
+export const originalUrl = ${src};
+const buf = await readFile(new URL(originalUrl, import.meta.url));
+export default buf;`
+
+A function that returns the loader code for the buffer.
+
 ## License
 
 [MIT](LICENSE)

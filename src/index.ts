@@ -8,6 +8,7 @@ export type Options =
 	| {
 			include?: Array<string | RegExp> | string | RegExp;
 			exclude?: Array<string | RegExp> | string | RegExp;
+			loader?: (src: string) => string;
 	  }
 	| undefined;
 
@@ -22,7 +23,7 @@ const cleanId = (id: string) => id.replace(matchRE, "");
 const buildRollupAsset = (referenceId: string) =>
 	`import.meta.ROLLUP_FILE_URL_${referenceId}`;
 
-const loader = (src: string) => {
+const defaultLoader = (src: string) => {
 	return `
 import { readFile } from 'node:fs/promises';
 export const originalUrl = ${src};
@@ -32,7 +33,7 @@ export default buf;
 };
 
 const bufferImport = (options: Options = {}): Plugin => {
-	const { include, exclude } = options;
+	const { include, exclude, loader = defaultLoader } = options;
 
 	const filter = createFilter(include, exclude);
 
