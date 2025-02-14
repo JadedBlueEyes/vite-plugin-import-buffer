@@ -1,6 +1,6 @@
 root = true
 
-[.github/*.{yml}]
+[.github/**/*.yml]
 indent_style = space
 indent_size = 2
 [*.{ts,js}]
