@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-import-buffer",
   "version": "0.1.0",
-  "description": "",
+  "description": "Import files as node Buffers",
   "type": "module",
   "main": "dist/index.esm.js",
   "exports": {
@@ -19,7 +19,7 @@
     "format": "biome format --write src"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jade Ellis",
   "license": "MIT",
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
@@ -35,5 +35,13 @@
   "dependencies": {
     "@rollup/pluginutils": "^5.1.4"
   },
-  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321"
+  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JadedBlueEyes/vite-plugin-import-buffer.git"
+  },
+  "bugs": {
+    "url": "https://github.com/JadedBlueEyes/vite-plugin-import-buffer/issues"
+  },
+  "homepage": "https://github.com/JadedBlueEyes/vite-plugin-import-buffer#readme"
 }
