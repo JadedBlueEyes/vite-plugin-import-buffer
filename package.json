@@ -2,7 +2,6 @@
   "name": "vite-plugin-import-buffer",
   "version": "0.1.2",
   "description": "Import files as node Buffers",
-  "type": "module",
   "main": "dist/index.esm.js",
   "exports": {
     "import": "./dist/index.esm.js",
